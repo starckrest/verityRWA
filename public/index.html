@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2c"><title>VerityRWA · Asset Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark"><span></span><span></span><span></span></div><div><b>verity<span>rwa</span></b><small>ASSET NETWORK</small></div></div>
+      <div class="network-chip"><i></i><span>CONSORTIUM NETWORK</span><b>LIVE</b></div>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="assets"><span class="nav-icon">▦</span>Asset registry <span class="nav-count" id="nav-count">03</span></button>
+        <button class="nav-item" data-view="transfers"><span class="nav-icon">⇄</span>Transfer desk</button>
+        <button class="nav-item" data-view="audit"><span class="nav-icon">◷</span>Audit explorer</button>
+      </nav>
+      <div class="side-label roles-label">IDENTITY CONTEXT</div>
+      <div class="identity-card"><div class="avatar" id="role-avatar">IS</div><div class="identity-info"><small>ACTING AS</small><b id="identity-name">Asset issuer</b><span id="identity-org">Issuer Consortium</span></div><span class="chevron">⌄</span><select id="role-select" aria-label="Switch demo role">
+        <option value="issuer">Asset issuer</option><option value="verifier">Independent verifier</option><option value="appraiser">Valuation partner</option><option value="compliance">Compliance officer</option><option value="investor">Investor</option><option value="auditor">Auditor</option>
+      </select></div>
+      <div class="sidebar-bottom"><div class="fabric-mark">H</div><div><b>Hyperledger Fabric</b><small>Permissioned ledger · Demo</small></div><span class="help-dot">?</span></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumbs">Workspace <span>/</span> <b id="breadcrumb">Asset registry</b></div><div class="topbar-right"><div class="block-status"><i></i><span>NETWORK HEALTHY</span></div><button id="reset-btn" class="quiet-button" title="Restore the original demo data">↺ <span>Reset demo</span></button><div class="profile-mini">SA</div></div></header>
+      <div class="demo-banner"><span class="demo-dot"></span><div><b>Interview demo environment</b><span>Transactions are recorded in the local demo ledger. Connect a Fabric network to use consortium identities and endorsement.</span></div><button id="banner-dismiss" aria-label="Dismiss banner">×</button></div>
+      <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>REAL-WORLD ASSET GOVERNANCE</div><h1 id="page-title">Asset registry<span class="heading-period">.</span></h1><p id="page-subtitle">A trusted path from physical evidence to governed digital ownership.</p></div><button class="primary-button" id="register-btn"><span>＋</span> Register an asset</button></section>
+      <section class="metrics" id="metrics"></section>
+      <section class="content-grid">
+        <div class="registry-card">
+          <div class="card-head"><div><div class="section-title" id="table-title">Your asset portfolio</div><div class="section-note" id="table-note">Every asset, one governed lifecycle</div></div><div class="table-controls"><label class="search-box"><span>⌕</span><input id="search" placeholder="Search assets" autocomplete="off"></label><select id="filter-status"><option value="all">All states</option><option>REGISTERED</option><option>VERIFIED</option><option>VALUED</option><option>APPROVED</option><option>TOKENIZED</option><option>REJECTED</option><option>REDEEMED</option><option>RETIRED</option></select></div></div>
+          <div class="table-wrap"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div>
+          <div class="table-foot"><span id="result-count">Showing 0 assets</span><span class="ledger-note"><i></i>Ledger synced <b id="sync-time">just now</b></span></div>
+        </div>
+        <aside class="right-rail" id="right-rail"><div class="rail-card lifecycle-card"><div class="rail-head"><div><div class="section-title">Lifecycle map</div><div class="section-note">A shared path across asset types</div></div><span class="tiny-spark">↗</span></div><div class="lifecycle-flow" id="lifecycle-flow"></div><div class="lifecycle-foot"><span><i class="legend-done"></i>Completed</span><span><i class="legend-current"></i>Current</span><span><i class="legend-next"></i>Upcoming</span></div></div>
+          <div class="rail-card activity-card"><div class="rail-head"><div><div class="section-title">Latest activity</div><div class="section-note">Committed governance events</div></div><button class="text-button" data-view="audit">View all →</button></div><div id="activity-list"></div></div>
+          <div class="trust-card"><div class="trust-icon">⌁</div><div><b>Trust, with provenance.</b><p>Every state change is attributed to an organization identity and written to the shared ledger.</p><span>FABRIC CHANNEL <strong>rwa-consortium</strong></span></div></div>
+        </aside>
+      </section>
+      <footer class="page-footer"><span>VERITYRWA <i>·</i> MULTI-PARTY ASSET GOVERNANCE</span><span>DEMO NETWORK <i>·</i> LOCAL LEDGER MODE</span></footer>
+    </main>
+  </div>
+  <div class="overlay" id="overlay"><section class="drawer" id="drawer" aria-modal="true" role="dialog"><button class="drawer-close" id="drawer-close">×</button><div id="drawer-content"></div></section></div>
+  <div class="toast" id="toast"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

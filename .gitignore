@@ -1,0 +1,12 @@
+node_modules/
+fabric-dev/
+chaincode/vendor/
+data/demo-ledger.json
+.env
+.env.*
+.DS_Store
+*.tar.gz
+*.pem
+*_sk
+*.block
+*.tx

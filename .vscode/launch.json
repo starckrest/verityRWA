@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "VerityRWA demo server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": { "PORT": "4173" },
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "VerityRWA · Fabric live",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.js",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Start VerityRWA Fabric network",
+      "console": "integratedTerminal",
+      "env": { "PORT": "4179", "LEDGER_MODE": "fabric" },
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

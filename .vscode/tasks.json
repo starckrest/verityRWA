@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start VerityRWA Fabric network",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/start-fabric-network.sh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": false }
+    }
+  ]
+}
